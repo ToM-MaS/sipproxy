@@ -1,0 +1,663 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 10:41:19 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 10:41:19 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') LIMIT 1
+Rendered subscribers/_form.html.erb (11.2ms)
+Rendered subscribers/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 54ms (Views: 20.8ms | ActiveRecord: 1.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190962)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (48.0ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 2.0ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 10:41:19 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 10:41:19 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') AND ("subscribers".id <> 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (9.0ms)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 12:58:45 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 12:58:45 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') LIMIT 1
+Rendered subscribers/_form.html.erb (11.2ms)
+Rendered subscribers/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 54ms (Views: 20.7ms | ActiveRecord: 1.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190962)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (8.9ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 2.0ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 12:58:45 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 12:58:45 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') AND ("subscribers".id <> 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (9.4ms)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:11:24 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 14:11:24 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') LIMIT 1
+Rendered subscribers/_form.html.erb (11.0ms)
+Rendered subscribers/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 54ms (Views: 20.5ms | ActiveRecord: 1.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190962)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (9.1ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 2.0ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:11:24 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 14:11:24 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') AND ("subscribers".id <> 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (9.2ms)
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.8ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:12:13 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 14:12:13 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') LIMIT 1
+Rendered subscribers/_form.html.erb (11.1ms)
+Rendered subscribers/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 54ms (Views: 20.8ms | ActiveRecord: 2.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190962)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (10.4ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 2.0ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.6ms)
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.2ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:12:13 UTC, "domain"=>"MyString", "email_address"=>"MyString", "ha1"=>"MyString", "ha1b"=>"MyString", "id"=>980190962, "password"=>"[FILTERED]", "rpid"=>"MyString", "updated_at"=>2011-02-14 14:12:13 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190962) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'MyString') AND ("subscribers".id <> 980190962) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (9.1ms)
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.9ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-14 14:14:30.183124', '2011-02-14 14:14:30.183124')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-14 14:14:30.228557', '2011-02-14 14:14:30.228557')[0m
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-14 14:14:30.239531', '2011-02-14 14:14:30.239531')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-14 14:14:30.256438', '2011-02-14 14:14:30.256438')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (13.4ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 5.6ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-14 14:14:30.293413', '2011-02-14 14:14:30.293413')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 2.9ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-14 14:14:30.356455', '2011-02-14 14:14:30.356455')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.5ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-14 14:14:30.380054', '2011-02-14 14:14:30.380054')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-14 14:14:30.398153', '2011-02-14 14:14:30.398153')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:14:30 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-14 14:14:30 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-14 14:14:30.398153', "updated_at" = '2011-02-14 14:14:30.398153' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 13ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.9ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-14 14:15:40.862759', '2011-02-14 14:15:40.862759')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-14 14:15:40.908414', '2011-02-14 14:15:40.908414')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-14 14:15:40.919275', '2011-02-14 14:15:40.919275')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-14 14:15:40.937514', '2011-02-14 14:15:40.937514')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (14.4ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 5.6ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (2.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-14 14:15:40.975289', '2011-02-14 14:15:40.975289')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.5ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 3.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-14 14:15:41.039992', '2011-02-14 14:15:41.039992')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.5ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-14 14:15:41.063752', '2011-02-14 14:15:41.063752')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.0ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-14 14:15:41.081977', '2011-02-14 14:15:41.081977')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:15:41 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-14 14:15:41 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-14 14:15:41.081977', "updated_at" = '2011-02-14 14:15:41.081977' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 13ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.8ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-14 14:21:38.080592', '2011-02-14 14:21:38.080592')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-14 14:21:38.126528', '2011-02-14 14:21:38.126528')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-14 14:21:38.137401', '2011-02-14 14:21:38.137401')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-14 14:21:38.154483', '2011-02-14 14:21:38.154483')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (13.2ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 5.6ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-14 14:21:38.191858', '2011-02-14 14:21:38.191858')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.2ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-14 14:21:38.255083', '2011-02-14 14:21:38.255083')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.6ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-14 14:21:38.278913', '2011-02-14 14:21:38.278913')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-14 14:21:38.296937', '2011-02-14 14:21:38.296937')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-14 14:21:38 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-14 14:21:38 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-14 14:21:38.296937', "updated_at" = '2011-02-14 14:21:38.296937' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 13ms
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.8ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.9ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.7ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.7ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-14 14:38:22.401939', '2011-02-14 14:38:22.401939')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-14 14:40:14.303893', '2011-02-14 14:40:14.303893')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-15 07:23:05.821547', '2011-02-15 07:23:05.821547')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-15 07:23:11.630289', '2011-02-15 07:23:11.630289')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-15 07:23:11.703014', '2011-02-15 07:23:11.703014')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 10ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-15 07:23:11.713967', '2011-02-15 07:23:11.713967')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-15 07:23:11.730216', '2011-02-15 07:23:11.730216')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (13.5ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 5.5ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (2.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-15 07:23:11.819820', '2011-02-15 07:23:11.819820')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 3.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-15 07:23:11.847598', '2011-02-15 07:23:11.847598')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.9ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-15 07:23:11.872072', '2011-02-15 07:23:11.872072')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.0ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-15 07:23:11.890255', '2011-02-15 07:23:11.890255')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-15 07:23:11 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-15 07:23:11 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-15 07:23:11.890255', "updated_at" = '2011-02-15 07:23:11.890255' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 26ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (1.7ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.9ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-15 08:55:54.383932', '2011-02-15 08:55:54.383932')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-15 08:56:00.166749', '2011-02-15 08:56:00.166749')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-15 08:56:00.212427', '2011-02-15 08:56:00.212427')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-15 08:56:00.223295', '2011-02-15 08:56:00.223295')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-15 08:56:00.239340', '2011-02-15 08:56:00.239340')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (13.1ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 5.6ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (2.2ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-15 08:56:00.276216', '2011-02-15 08:56:00.276216')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 3.0ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-15 08:56:00.339890', '2011-02-15 08:56:00.339890')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.7ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-15 08:56:00.363836', '2011-02-15 08:56:00.363836')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-15 08:56:00.381704', '2011-02-15 08:56:00.381704')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-15 08:56:00 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-15 08:56:00 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-15 08:56:00.381704', "updated_at" = '2011-02-15 08:56:00.381704' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 13ms

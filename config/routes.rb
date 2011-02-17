@@ -1,4 +1,6 @@
 Sipproxy::Application.routes.draw do
+  resources :dbaliases
+
   resources :subscribers
 
   # The priority is based upon order of creation:

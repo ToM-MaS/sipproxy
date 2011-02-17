@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="data-model" xml:lang="de"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>Daten-Modell</title>
+
+  <info>
+    <title>SIPProxy Kontrollapplikation</title>
+
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Stefan</firstname>
+
+          <surname>Wintermeyer</surname>
+        </personname>
+
+        <email>stefan.wintermeyer@amooma.de</email>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Philipp</firstname>
+
+          <surname>Kempgen</surname>
+        </personname>
+
+        <email>philipp.kempgen@amooma.de</email>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Sascha</firstname>
+
+          <surname>Daniels</surname>
+        </personname>
+
+        <email>sascha.daniels@amooma.de</email>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Peter</firstname>
+
+          <surname>Kozak</surname>
+        </personname>
+
+        <email>peter.kozak@amooma.de</email>
+      </author>
+
+      <author>
+        <orgname>AMOOMA GmbH</orgname>
+
+        <uri>
+          <link xlink:href="http://www.amooma.de/">http://www.amooma.de</link>
+        </uri>
+      </author>
+    </authorgroup>
+  </info>
+
+  <para>SIPProxy besitz folgende Daten-Modelle:<informaltable>
+      <tgroup cols="2">
+        <thead>
+          <row>
+            <entry>Modell</entry>
+
+            <entry>Dateiname</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>
+              <classname>Subscriber</classname>
+            </entry>
+
+            <entry>
+              <filename>subscribers.rb</filename>
+            </entry>
+          </row>
+
+          <row>
+            <entry>
+              <classname>Dbaliases</classname>
+            </entry>
+
+            <entry>
+              <filename>dbaliases.rb</filename>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable></para>
+
+  <para>Die Datenmodelle geben direkt die Datenbanstruktur in Kamalio wieder.
+  Dies ermöglicht bei verwendung einer kompatiblen Datenbank den gemeinsamen
+  Zugriff aus der Rails-Applikation und dem SIP Proby selbst. Alternativ kann
+  kamailio auch DBTEXT als Benutzerdatenbank verewenden, dazu ezeugt die
+  Rails-Applikation die nötigen Textdateien im Konfigurationspfad von
+  Kamailio.</para>
+
+  <section xml:id="model-codec">
+    <title>Subscriber</title>
+
+    <para>Enthält die Daten der SIP-Accounts, die Kamailio bekannt sein
+    sollen. Es werden dabei zumindest "username" und "ha1" benötigt. Die
+    verwendung von Klartexpasswörtern sollte unterbleiben.</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>username</para>
+
+        <para>Enthält den SIP Benutzernamen</para>
+      </listitem>
+
+      <listitem>
+        <para>domain</para>
+
+        <para>Enthält den SIP Domainnamen</para>
+      </listitem>
+
+      <listitem>
+        <para>password</para>
+
+        <para>Enthält das SIP Passwort</para>
+      </listitem>
+
+      <listitem>
+        <para>email_address</para>
+
+        <para>Enthält die Email-Adresse des Users</para>
+      </listitem>
+
+      <listitem>
+        <para>ha1</para>
+
+        <para>Enthält MD5 Passwort-Hash aus "username:realm:password"</para>
+      </listitem>
+
+      <listitem>
+        <para>ha1b</para>
+
+        <para>Enthält MD5 Passwort-Hash aus
+        "username@domain:realm:password"</para>
+      </listitem>
+
+      <listitem>
+        <para>rpid</para>
+
+        <para>Enthält SIP Remote-Party-ID</para>
+      </listitem>
+    </itemizedlist>
+
+    <formalpara>
+      <title>Verknüpfungen</title>
+
+      <para>
+        <itemizedlist>
+          <listitem>
+            <para>
+              <methodname>has_many</methodname>
+
+              <xref linkend="dbalias" />
+            </para>
+          </listitem>
+        </itemizedlist>
+      </para>
+    </formalpara>
+  </section>
+
+  <section xml:id="model-manufacturer">
+    <title>Dbalias</title>
+
+    <para>Enthält Aliase für bestehende SIP-Accounts und ermöglicht einer Art
+    "dialplan", da z.B. Aliase numerisch sein können und auf alphanumerische
+    SIP-User verweisen.</para>
+    <itemizedlist>
+      <listitem>
+        <para>alias_username</para>
+
+        <para>Enthält den Alias SIP Benutzernamen</para>
+      </listitem>
+      <listitem>
+        <para>alias_domain</para>
+
+        <para>Enthält den Alias SIP Domainnamen</para>
+      </listitem>
+      <listitem>
+        <para>username</para>
+
+        <para>Enthält den SIP Benutzernamen</para>
+      </listitem>
+      <listitem>
+        <para>domain</para>
+
+        <para>Enthält den SIP Domainnamen</para>
+      </listitem>
+    </itemizedlist>  
+  </section>
+</chapter>

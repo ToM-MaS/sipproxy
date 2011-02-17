@@ -1,0 +1,33 @@
+<%= form_for(@dbalias) do |f| %>
+  <% if @dbalias.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dbalias.errors.count, "error") %> prohibited this dbalias from being saved:</h2>
+
+      <ul>
+      <% @dbalias.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :alias_username %><br />
+    <%= f.text_field :alias_username %>
+  </div>
+  <div class="field">
+    <%= f.label :alias_domain %><br />
+    <%= f.text_field :alias_domain %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

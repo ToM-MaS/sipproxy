@@ -661,3 +661,1199 @@ WARNING: Can't mass-assign protected attributes: id
   [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
 Redirected to http://test.host/subscribers/980190963
 Completed 302 Found in 13ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:07:47.561662', '2011-02-17 08:07:47.561662')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"MyString", "alias_username"=>"MyString", "created_at"=>2011-02-17 08:07:53 UTC, "domain"=>"MyString", "id"=>980190962, "updated_at"=>2011-02-17 08:07:53 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'MyString') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" = 'MyString') LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (10.9ms)
+Rendered dbaliases/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 52ms (Views: 20.4ms | ActiveRecord: 2.3ms)
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "dbaliases"
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "dbaliases"
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "dbaliases"
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+Rendered dbaliases/_form.html.erb (5.8ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 2.0ms)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (4.8ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"MyString", "alias_username"=>"MyString", "created_at"=>2011-02-17 08:07:53 UTC, "domain"=>"MyString", "id"=>980190962, "updated_at"=>2011-02-17 08:07:53 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'MyString') AND ("dbaliases".id <> 980190962) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" = 'MyString') AND ("dbaliases".id <> 980190962) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (8.2ms)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 0.9ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (2.2ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:07:53.561426', '2011-02-17 08:07:53.561426')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:07:53.618229', '2011-02-17 08:07:53.618229')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 10ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:07:53.629690', '2011-02-17 08:07:53.629690')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:07:53.646687', '2011-02-17 08:07:53.646687')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (10.3ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 6.5ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:07:53.679007', '2011-02-17 08:07:53.679007')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:07:53.703344', '2011-02-17 08:07:53.703344')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (47.8ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:07:53.767575', '2011-02-17 08:07:53.767575')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:07:53.786417', '2011-02-17 08:07:53.786417')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:07:53 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:07:53 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-17 08:07:53.786417', "updated_at" = '2011-02-17 08:07:53.786417' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 53ms
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.1ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" = 'test_username_1') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.1ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:10:18.340291', '2011-02-17 08:10:18.340291')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"MyString", "alias_username"=>"MyString", "created_at"=>2011-02-17 08:10:23 UTC, "domain"=>"MyString", "id"=>980190962, "updated_at"=>2011-02-17 08:10:23 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'MyString') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" = 'MyString') LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (11.0ms)
+Rendered dbaliases/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 52ms (Views: 20.5ms | ActiveRecord: 2.3ms)
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "dbaliases"
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "dbaliases"
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "dbaliases"
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+Rendered dbaliases/_form.html.erb (5.9ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 2.0ms)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (4.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"MyString", "alias_username"=>"MyString", "created_at"=>2011-02-17 08:10:23 UTC, "domain"=>"MyString", "id"=>980190962, "updated_at"=>2011-02-17 08:10:23 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'MyString') AND ("dbaliases".id <> 980190962) LIMIT 1
+  [1m[36mDbalias Load (0.1ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" = 'MyString') AND ("dbaliases".id <> 980190962) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (8.4ms)
+Completed 200 OK in 19ms (Views: 12.2ms | ActiveRecord: 0.8ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (2.4ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:10:24.372971', '2011-02-17 08:10:24.372971')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:10:24.429873', '2011-02-17 08:10:24.429873')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 10ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:10:24.441172', '2011-02-17 08:10:24.441172')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:10:24.458157', '2011-02-17 08:10:24.458157')[0m
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (10.6ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 6.8ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:10:24.490202', '2011-02-17 08:10:24.490202')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:10:24.514887', '2011-02-17 08:10:24.514887')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (47.7ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.7ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:10:24.579266', '2011-02-17 08:10:24.579266')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.1ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:10:24.597688', '2011-02-17 08:10:24.597688')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:10:24 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:10:24 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-17 08:10:24.597688', "updated_at" = '2011-02-17 08:10:24.597688' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 13ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_3', 'test_username_4', 'test_domain_3', '2011-02-17 08:13:30.659231', '2011-02-17 08:13:30.659231')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:13:30.714295', '2011-02-17 08:13:30.714295')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"MyString", "alias_username"=>"MyString", "created_at"=>2011-02-17 08:13:36 UTC, "domain"=>"MyString", "id"=>980190962, "updated_at"=>2011-02-17 08:13:36 UTC, "username"=>"MyString"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'MyString') LIMIT 1
+Rendered dbaliases/_form.html.erb (8.4ms)
+Rendered dbaliases/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 47ms (Views: 17.9ms | ActiveRecord: 3.1ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962)[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (5.9ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 2.0ms)
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (4.9ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1[0m
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"MyString", "alias_username"=>"MyString", "created_at"=>2011-02-17 08:13:36 UTC, "domain"=>"MyString", "id"=>980190962, "updated_at"=>2011-02-17 08:13:36 UTC, "username"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190962) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'MyString') AND ("dbaliases".id <> 980190962) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (6.8ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.7ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:13:36.774934', '2011-02-17 08:13:36.774934')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (2.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:13:36.832061', '2011-02-17 08:13:36.832061')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:13:36.842738', '2011-02-17 08:13:36.842738')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:13:36.859842', '2011-02-17 08:13:36.859842')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (10.1ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 6.6ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:13:36.890965', '2011-02-17 08:13:36.890965')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:13:36.914603', '2011-02-17 08:13:36.914603')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.5ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (2.4ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:13:36.975965', '2011-02-17 08:13:36.975965')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 3.2ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:13:36.997045', '2011-02-17 08:13:36.997045')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:13:36 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:13:36 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-17 08:13:36.997045', "updated_at" = '2011-02-17 08:13:36.997045' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 13ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_3', 'test_username_4', 'test_domain_3', '2011-02-17 08:14:57.068667', '2011-02-17 08:14:57.068667')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (2.1ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:14:57.124517', '2011-02-17 08:14:57.124517')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_1', 'test_alias_domain_1', 'test_username_1', 'test_domain_1', '2011-02-17 08:15:02.913299', '2011-02-17 08:15:02.913299')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_username"=>"test_alias_username_2", "alias_domain"=>"test_alias_domain_2", "username"=>"test_username_2", "domain"=>"test_domain_2"}}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_2', 'test_alias_domain_2', 'test_username_2', 'test_domain_2', '2011-02-17 08:15:02.956678', '2011-02-17 08:15:02.956678')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases/980190964
+Completed 302 Found in 8ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.4ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_3', 'test_alias_domain_3', 'test_username_3', 'test_domain_3', '2011-02-17 08:15:03.008812', '2011-02-17 08:15:03.008812')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963)[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_4', 'test_username_4', 'test_domain_4', '2011-02-17 08:15:03.024547', '2011-02-17 08:15:03.024547')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (10.5ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 6.0ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_5', 'test_alias_domain_5', 'test_username_5', 'test_domain_5', '2011-02-17 08:15:03.057863', '2011-02-17 08:15:03.057863')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 1.0ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_6', 'test_alias_domain_6', 'test_username_6', 'test_domain_6', '2011-02-17 08:15:03.080405', '2011-02-17 08:15:03.080405')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (5.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.7ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_7', 'test_alias_domain_7', 'test_username_7', 'test_domain_7', '2011-02-17 08:15:03.100728', '2011-02-17 08:15:03.100728')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_8', 'test_alias_domain_8', 'test_username_8', 'test_domain_8', '2011-02-17 08:15:03.118975', '2011-02-17 08:15:03.118975')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"test_alias_domain_8", "alias_username"=>"test_alias_username_8", "created_at"=>2011-02-17 08:15:03 UTC, "domain"=>"test_domain_8", "id"=>980190963, "updated_at"=>2011-02-17 08:15:03 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') AND ("dbaliases".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "dbaliases" SET "created_at" = '2011-02-17 08:15:03.118975', "updated_at" = '2011-02-17 08:15:03.118975' WHERE ("dbaliases"."id" = 980190963)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases/980190963
+Completed 302 Found in 12ms
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:15:03.158920', '2011-02-17 08:15:03.158920')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:15:03.174992', '2011-02-17 08:15:03.174992')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:15:03.185408', '2011-02-17 08:15:03.185408')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:15:03.206268', '2011-02-17 08:15:03.206268')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (11.1ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 6.3ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:15:03.238087', '2011-02-17 08:15:03.238087')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 1.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:15:03.262099', '2011-02-17 08:15:03.262099')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:15:03.286012', '2011-02-17 08:15:03.286012')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:15:03.304949', '2011-02-17 08:15:03.304949')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:15:03 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:15:03 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.1ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.1ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-17 08:15:03.304949', "updated_at" = '2011-02-17 08:15:03.304949' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_3', 'test_username_4', 'test_domain_3', '2011-02-17 08:19:30.989695', '2011-02-17 08:19:30.989695')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (2.1ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:19:31.045124', '2011-02-17 08:19:31.045124')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_1', 'test_alias_domain_1', 'test_username_1', 'test_domain_1', '2011-02-17 08:19:36.836880', '2011-02-17 08:19:36.836880')[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_username"=>"test_alias_username_2", "alias_domain"=>"test_alias_domain_2", "username"=>"test_username_2", "domain"=>"test_domain_2"}}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_2', 'test_alias_domain_2', 'test_username_2', 'test_domain_2', '2011-02-17 08:19:36.879215', '2011-02-17 08:19:36.879215')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases/980190964
+Completed 302 Found in 8ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_3', 'test_alias_domain_3', 'test_username_3', 'test_domain_3', '2011-02-17 08:19:36.888293', '2011-02-17 08:19:36.888293')[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963)[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_4', 'test_username_4', 'test_domain_4', '2011-02-17 08:19:36.905139', '2011-02-17 08:19:36.905139')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (48.2ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 5.7ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_5', 'test_alias_domain_5', 'test_username_5', 'test_domain_5', '2011-02-17 08:19:36.977445', '2011-02-17 08:19:36.977445')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.0ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_6', 'test_alias_domain_6', 'test_username_6', 'test_domain_6', '2011-02-17 08:19:37.000334', '2011-02-17 08:19:37.000334')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (5.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_7', 'test_alias_domain_7', 'test_username_7', 'test_domain_7', '2011-02-17 08:19:37.021037', '2011-02-17 08:19:37.021037')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_8', 'test_alias_domain_8', 'test_username_8', 'test_domain_8', '2011-02-17 08:19:37.037798', '2011-02-17 08:19:37.037798')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"test_alias_domain_8", "alias_username"=>"test_alias_username_8", "created_at"=>2011-02-17 08:19:37 UTC, "domain"=>"test_domain_8", "id"=>980190963, "updated_at"=>2011-02-17 08:19:37 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mDbalias Load (0.1ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') AND ("dbaliases".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "dbaliases" SET "created_at" = '2011-02-17 08:19:37.037798', "updated_at" = '2011-02-17 08:19:37.037798' WHERE ("dbaliases"."id" = 980190963)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases/980190963
+Completed 302 Found in 12ms
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (2.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:19:37.078204', '2011-02-17 08:19:37.078204')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:19:37.134583', '2011-02-17 08:19:37.134583')[0m
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:19:37.145129', '2011-02-17 08:19:37.145129')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:19:37.161718', '2011-02-17 08:19:37.161718')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (10.1ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 7.9ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:19:37.192402', '2011-02-17 08:19:37.192402')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:19:37.215957', '2011-02-17 08:19:37.215957')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (46.8ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:19:37.278947', '2011-02-17 08:19:37.278947')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:19:37.297533', '2011-02-17 08:19:37.297533')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:19:37 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:19:37 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.1ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-17 08:19:37.297533', "updated_at" = '2011-02-17 08:19:37.297533' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_3', 'test_username_4', 'test_domain_3', '2011-02-17 08:45:46.465197', '2011-02-17 08:45:46.465197')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:45:46.559289', '2011-02-17 08:45:46.559289')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_1', 'test_alias_domain_1', 'test_username_1', 'test_domain_1', '2011-02-17 08:45:52.482198', '2011-02-17 08:45:52.482198')[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_username"=>"test_alias_username_2", "alias_domain"=>"test_alias_domain_2", "username"=>"test_username_2", "domain"=>"test_domain_2"}}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_2', 'test_alias_domain_2', 'test_username_2', 'test_domain_2', '2011-02-17 08:45:52.524733', '2011-02-17 08:45:52.524733')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases/980190964
+Completed 302 Found in 8ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_3', 'test_alias_domain_3', 'test_username_3', 'test_domain_3', '2011-02-17 08:45:52.534366', '2011-02-17 08:45:52.534366')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963)[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_4', 'test_alias_domain_4', 'test_username_4', 'test_domain_4', '2011-02-17 08:45:52.549787', '2011-02-17 08:45:52.549787')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mDbalias Load (2.0ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (10.1ms)
+Completed 200 OK in 61ms (Views: 20.5ms | ActiveRecord: 7.6ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_5', 'test_alias_domain_5', 'test_username_5', 'test_domain_5', '2011-02-17 08:45:52.620955', '2011-02-17 08:45:52.620955')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_6', 'test_alias_domain_6', 'test_username_6', 'test_domain_6', '2011-02-17 08:45:52.643866', '2011-02-17 08:45:52.643866')[0m
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (4.9ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.7ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_7', 'test_alias_domain_7', 'test_username_7', 'test_domain_7', '2011-02-17 08:45:52.664087', '2011-02-17 08:45:52.664087')
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.0ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('test_alias_username_8', 'test_alias_domain_8', 'test_username_8', 'test_domain_8', '2011-02-17 08:45:52.681068', '2011-02-17 08:45:52.681068')
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"test_alias_domain_8", "alias_username"=>"test_alias_username_8", "created_at"=>2011-02-17 08:45:52 UTC, "domain"=>"test_domain_8", "id"=>980190963, "updated_at"=>2011-02-17 08:45:52 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') AND ("dbaliases".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "dbaliases" SET "created_at" = '2011-02-17 08:45:52.681068', "updated_at" = '2011-02-17 08:45:52.681068' WHERE ("dbaliases"."id" = 980190963)
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases/980190963
+Completed 302 Found in 12ms
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:45:52.760358', '2011-02-17 08:45:52.760358')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:45:52.776643', '2011-02-17 08:45:52.776643')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:45:52.787226', '2011-02-17 08:45:52.787226')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = 'test_username_3') ORDER BY alias_username[0m
+SQLite3::SQLException: no such column: dbaliases.subscriber_id: SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = 'test_username_3') ORDER BY alias_username
+Completed   in 8ms
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:45:52.806422', '2011-02-17 08:45:52.806422')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (10.0ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 6.0ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:45:52.837777', '2011-02-17 08:45:52.837777')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.4ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 1.2ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:45:52.862183', '2011-02-17 08:45:52.862183')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.8ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:45:52.885957', '2011-02-17 08:45:52.885957')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.1ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:45:52.904410', '2011-02-17 08:45:52.904410')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:45:52 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:45:52 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.1ms)[0m  UPDATE "subscribers" SET "created_at" = '2011-02-17 08:45:52.904410', "updated_at" = '2011-02-17 08:45:52.904410' WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_4', 'test_alias_domain_3', 'test_username_4', 'test_domain_3', '2011-02-17 08:59:16.255782', '2011-02-17 08:59:16.255782', NULL)
+  [1m[36mDbalias Load (0.7ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:59:16.351648', '2011-02-17 08:59:16.351648')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_1', 'test_alias_domain_1', 'test_username_1', 'test_domain_1', '2011-02-17 08:59:22.170365', '2011-02-17 08:59:22.170365', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_username"=>"test_alias_username_2", "alias_domain"=>"test_alias_domain_2", "username"=>"test_username_2", "domain"=>"test_domain_2"}}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_2', 'test_alias_domain_2', 'test_username_2', 'test_domain_2', '2011-02-17 08:59:22.214641', '2011-02-17 08:59:22.214641', NULL)[0m
+  [1m[35mDbalias Load (1.4ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases/980190964
+Completed 302 Found in 48ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_3', 'test_alias_domain_3', 'test_username_3', 'test_domain_3', '2011-02-17 08:59:22.264080', '2011-02-17 08:59:22.264080', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.5ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_4', 'test_alias_domain_4', 'test_username_4', 'test_domain_4', '2011-02-17 08:59:22.280828', '2011-02-17 08:59:22.280828', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mDbalias Load (0.5ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (10.2ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 8.9ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_5', 'test_alias_domain_5', 'test_username_5', 'test_domain_5', '2011-02-17 08:59:22.314496', '2011-02-17 08:59:22.314496', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.8ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.9ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_6', 'test_alias_domain_6', 'test_username_6', 'test_domain_6', '2011-02-17 08:59:22.337770', '2011-02-17 08:59:22.337770', NULL)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (5.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 1.1ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_7', 'test_alias_domain_7', 'test_username_7', 'test_domain_7', '2011-02-17 08:59:22.358514', '2011-02-17 08:59:22.358514', NULL)
+  [1m[36mDbalias Load (0.7ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.4ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.6ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_8', 'test_alias_domain_8', 'test_username_8', 'test_domain_8', '2011-02-17 08:59:22.376181', '2011-02-17 08:59:22.376181', NULL)
+  [1m[36mDbalias Load (0.7ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"test_alias_domain_8", "alias_username"=>"test_alias_username_8", "created_at"=>2011-02-17 08:59:22 UTC, "domain"=>"test_domain_8", "id"=>980190963, "subscriber_id"=>nil, "updated_at"=>2011-02-17 08:59:22 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mDbalias Load (0.5ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') AND ("dbaliases".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "dbaliases" SET "created_at" = '2011-02-17 08:59:22.376181', "updated_at" = '2011-02-17 08:59:22.376181' WHERE ("dbaliases"."id" = 980190963)
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases/980190963
+Completed 302 Found in 13ms
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 08:59:22.459267', '2011-02-17 08:59:22.459267')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 08:59:22.475633', '2011-02-17 08:59:22.475633')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 08:59:22.485992', '2011-02-17 08:59:22.485992')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = 'test_username_3') ORDER BY alias_username[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers
+Completed 302 Found in 11ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "subscribers"
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 08:59:22.509287', '2011-02-17 08:59:22.509287')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Rendered subscribers/_form.html.erb (10.5ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 7.9ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 08:59:22.540772', '2011-02-17 08:59:22.540772')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#index as HTML
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.2ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 08:59:22.565879', '2011-02-17 08:59:22.565879')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.8ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 08:59:22.589712', '2011-02-17 08:59:22.589712')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.1ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 08:59:22.609262', '2011-02-17 08:59:22.609262')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 08:59:22 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 08:59:22 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "subscribers" SET "created_at" = '2011-02-17 08:59:22.609262', "updated_at" = '2011-02-17 08:59:22.609262' WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_4', 'test_alias_domain_3', 'test_username_4', 'test_domain_3', '2011-02-17 09:04:46.168788', '2011-02-17 09:04:46.168788', NULL)
+  [1m[36mDbalias Load (0.7ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 09:04:46.264106', '2011-02-17 09:04:46.264106')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_1', 'test_alias_domain_1', 'test_username_1', 'test_domain_1', '2011-02-17 09:04:52.176051', '2011-02-17 09:04:52.176051', NULL)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"dbalias"=>{"alias_username"=>"test_alias_username_2", "alias_domain"=>"test_alias_domain_2", "username"=>"test_username_2", "domain"=>"test_domain_2"}}
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_2') LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_2', 'test_alias_domain_2', 'test_username_2', 'test_domain_2', '2011-02-17 09:04:52.219735', '2011-02-17 09:04:52.219735', NULL)[0m
+  [1m[35mDbalias Load (1.1ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_3', 'test_alias_domain_3', 'test_username_3', 'test_domain_3', '2011-02-17 09:04:52.230512', '2011-02-17 09:04:52.230512', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.5ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://test.host/dbaliases
+Completed 302 Found in 4ms
+  [1m[36mSQL (1.9ms)[0m  [1mSELECT COUNT(*) FROM "dbaliases"[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_4') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_4', 'test_alias_domain_4', 'test_username_4', 'test_domain_4', '2011-02-17 09:04:52.286086', '2011-02-17 09:04:52.286086', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mDbalias Load (0.5ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (10.3ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 10.2ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_5') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_5', 'test_alias_domain_5', 'test_username_5', 'test_domain_5', '2011-02-17 09:04:52.320039', '2011-02-17 09:04:52.320039', NULL)[0m
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.8ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 2.0ms)
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_6') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_6', 'test_alias_domain_6', 'test_username_6', 'test_domain_6', '2011-02-17 09:04:52.343700', '2011-02-17 09:04:52.343700', NULL)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (5.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.1ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_7') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_7', 'test_alias_domain_7', 'test_username_7', 'test_domain_7', '2011-02-17 09:04:52.364300', '2011-02-17 09:04:52.364300', NULL)
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mDbalias Load (0.4ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.5ms)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('test_alias_username_8', 'test_alias_domain_8', 'test_username_8', 'test_domain_8', '2011-02-17 09:04:52.381715', '2011-02-17 09:04:52.381715', NULL)
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  Processing by DbaliasesController#update as HTML
+  Parameters: {"dbalias"=>{"alias_domain"=>"test_alias_domain_8", "alias_username"=>"test_alias_username_8", "created_at"=>2011-02-17 09:04:52 UTC, "domain"=>"test_domain_8", "id"=>980190963, "subscriber_id"=>nil, "updated_at"=>2011-02-17 09:04:52 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[35mDbalias Load (0.4ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 980190963) LIMIT 1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = 'test_alias_username_8') AND ("dbaliases".id <> 980190963) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE "dbaliases" SET "created_at" = '2011-02-17 09:04:52.381715', "updated_at" = '2011-02-17 09:04:52.381715' WHERE ("dbaliases"."id" = 980190963)
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://test.host/dbaliases/980190963
+Completed 302 Found in 13ms
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_1') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_1', 'test_domain_1', 'test_password_1', 'test_email_address_1', 'test_ha1_1', 'test_ha1b_1', 'test_rpid_1', '2011-02-17 09:04:52.463386', '2011-02-17 09:04:52.463386')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#create as HTML
+  Parameters: {"subscriber"=>{"username"=>"test_username_2", "domain"=>"test_domain_2", "password"=>"[FILTERED]", "email_address"=>"test_email_address_2", "ha1"=>"test_ha1_2", "ha1b"=>"test_ha1b_2", "rpid"=>"test_rpid_2"}}
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_2') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_2', 'test_domain_2', 'test_password_2', 'test_email_address_2', 'test_ha1_2', 'test_ha1b_2', 'test_rpid_2', '2011-02-17 09:04:52.479691', '2011-02-17 09:04:52.479691')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190964
+Completed 302 Found in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_3') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_3', 'test_domain_3', 'test_password_3', 'test_email_address_3', 'test_ha1_3', 'test_ha1b_3', 'test_rpid_3', '2011-02-17 09:04:52.490247', '2011-02-17 09:04:52.490247')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subscribers"[0m
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = 980190963) ORDER BY alias_username[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "subscribers" WHERE ("subscribers"."id" = 980190963)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://test.host/subscribers
+Completed 302 Found in 9ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "subscribers"
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_4') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_4', 'test_domain_4', 'test_password_4', 'test_email_address_4', 'test_ha1_4', 'test_ha1b_4', 'test_rpid_4', '2011-02-17 09:04:52.511908', '2011-02-17 09:04:52.511908')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1
+Rendered subscribers/_form.html.erb (10.3ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 7.6ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_5') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_5', 'test_domain_5', 'test_password_5', 'test_email_address_5', 'test_ha1_5', 'test_ha1b_5', 'test_rpid_5', '2011-02-17 09:04:52.543429', '2011-02-17 09:04:52.543429')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#index as HTML
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 1.2ms)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_6') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_6', 'test_domain_6', 'test_password_6', 'test_email_address_6', 'test_ha1_6', 'test_ha1b_6', 'test_rpid_6', '2011-02-17 09:04:52.567532', '2011-02-17 09:04:52.567532')
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (7.6ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_7') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_7', 'test_domain_7', 'test_password_7', 'test_email_address_7', 'test_ha1_7', 'test_ha1b_7', 'test_rpid_7', '2011-02-17 09:04:52.591392', '2011-02-17 09:04:52.591392')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.0ms)
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('test_username_8', 'test_domain_8', 'test_password_8', 'test_email_address_8', 'test_ha1_8', 'test_ha1b_8', 'test_rpid_8', '2011-02-17 09:04:52.609325', '2011-02-17 09:04:52.609325')[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  Processing by SubscribersController#update as HTML
+  Parameters: {"subscriber"=>{"created_at"=>2011-02-17 09:04:52 UTC, "domain"=>"test_domain_8", "email_address"=>"test_email_address_8", "ha1"=>"test_ha1_8", "ha1b"=>"test_ha1b_8", "id"=>980190963, "password"=>"[FILTERED]", "rpid"=>"test_rpid_8", "updated_at"=>2011-02-17 09:04:52 UTC, "username"=>"test_username_8"}, "id"=>"980190963"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 980190963) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = 'test_username_8') AND ("subscribers".id <> 980190963) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "subscribers" SET "created_at" = '2011-02-17 09:04:52.609325', "updated_at" = '2011-02-17 09:04:52.609325' WHERE ("subscribers"."id" = 980190963)[0m
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://test.host/subscribers/980190963
+Completed 302 Found in 9ms

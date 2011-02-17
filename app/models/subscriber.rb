@@ -5,6 +5,8 @@ class Subscriber < ActiveRecord::Base
   after_save :generate_auth_db
   after_destroy :generate_auth_db
 
+  has_many :dbaliases, :order => 'alias_username', :dependent => :destroy
+  
   private
   def generate_auth_db
     if (AUTH_DB_ENGINE == 'dbtext')

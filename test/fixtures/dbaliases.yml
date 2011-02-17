@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  alias_username: MyString
+  alias_domain: MyString
+  username: MyString
+  domain: MyString
+
+two:
+  alias_username: MyString
+  alias_domain: MyString
+  username: MyString
+  domain: MyString

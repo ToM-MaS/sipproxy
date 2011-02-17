@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="installation-cantina" xml:lang="de"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+   
+
+  <title>Konfiguration des SIP Proxy Subsystems</title>
+
+   
+
+  <info>
+    <title>SIPProxy Rails Applikation</title>
+
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Stefan</firstname>
+
+          <surname>Wintermeyer</surname>
+        </personname>
+
+        <email>stefan.wintermeyer@amooma.de</email>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Philipp</firstname>
+
+          <surname>Kempgen</surname>
+        </personname>
+
+        <email>philipp.kempgen@amooma.de</email>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Sascha</firstname>
+
+          <surname>Daniels</surname>
+        </personname>
+
+        <email>sascha.daniels@amooma.de</email>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Peter</firstname>
+
+          <surname>Kozak</surname>
+        </personname>
+
+        <email>peter.kozak@amooma.de</email>
+      </author>
+
+      <author>
+        <orgname>AMOOMA GmbH</orgname>
+
+        <uri>
+          <link xlink:href="http://www.amooma.de/">http://www.amooma.de</link>
+        </uri>
+      </author>
+    </authorgroup>
+  </info>
+
+   
+
+  <para>Einstellungen in der Rails-Applikation.</para>
+
+   In der 
+
+  <command>environment.rb</command>
+
+   wird festgelegt, ob und an welche Stelle die Rails-Applikation Dateien für DBTEXT erzeigen soll. Es ist bei Verwendung von z.B. MySQL keine Erzeugung von Textdateien nötig.
+
+  <screen>AUTH_DB_ENGINE = 'dbtext'
+ALIAS_DB_ENGINE = 'dbtext'
+DBTEXT_SUBSCRIBER_FILE = '/opt/kamailio-3.1/etc/kamailio/db_text/subscriber'
+DBTEXT_DBALIASES_FILE = '/opt/kamailio-3.1/etc/kamailio/db_text/dbaliases'</screen>
+
+   
+
+  <para>Einstellungen in Kammalio</para>
+
+   In 
+
+  <command>kamailio.cfg</command>
+
+   müssen einige Parameter angepasst werden. Authentifikation und Aliase müssen aktiviert werden:
+
+  <screen>#!define WITH_AUTH
+#!define WITH_ALIASDB</screen>
+
+   Das DBTEXT Modul muss geladen werden:
+
+  <screen>loadmodule "db_text.so"</screen>
+
+  Der folgende Parameter legt fest, ob die DBTEXT Dateien nur beim Systemstart gelesen oder ob sie während der Laufzeit überprüft werden. caching mode (0),  non-caching mode (1), default: 0
+
+  <screen>modparam("db_text", "db_mode", 1)</screen>
+
+   Konfiguration des auth_db Moduls für DBTEXT Engine. Dabei wird mit "calculate_ha1: no" festgelegt, dass das Passwort bereits als Hash gespeichert ist.
+
+  <screen>modparam("auth_db", "db_url", "text:///opt/kamailio-3.1/etc/kamailio/db_text")
+modparam("auth_db", "calculate_ha1", no)
+modparam("auth_db", "password_column", "ha1")
+modparam("auth_db", "load_credentials", "")
+modparam("auth_db", "use_domain", MULTIDOMAIN)</screen>
+
+   Konfiguration der Alias-Datenbank für DBTEXT Engine.
+
+  <screen>modparam("alias_db", "db_url", "text:///opt/kamailio-3.1/etc/kamailio/db_text")
+modparam("alias_db", "use_domain", MULTIDOMAIN)</screen>
+
+   
+</chapter>

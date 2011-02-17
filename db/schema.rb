@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110214100151) do
+ActiveRecord::Schema.define(:version => 20110217085508) do
+
+  create_table "dbaliases", :force => true do |t|
+    t.string   "alias_username"
+    t.string   "alias_domain"
+    t.string   "username"
+    t.string   "domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "subscriber_id"
+  end
 
   create_table "subscribers", :force => true do |t|
     t.string   "username"

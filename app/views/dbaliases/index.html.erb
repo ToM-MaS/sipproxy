@@ -1,0 +1,29 @@
+<h1>Listing dbaliases</h1>
+
+<table>
+  <tr>
+    <th>Alias username</th>
+    <th>Alias domain</th>
+    <th>Username</th>
+    <th>Domain</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dbaliases.each do |dbalias| %>
+  <tr>
+    <td><%= dbalias.alias_username %></td>
+    <td><%= dbalias.alias_domain %></td>
+    <td><%= dbalias.username %></td>
+    <td><%= dbalias.domain %></td>
+    <td><%= link_to 'Show', dbalias %></td>
+    <td><%= link_to 'Edit', edit_dbalias_path(dbalias) %></td>
+    <td><%= link_to 'Destroy', dbalias, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dbalias', new_dbalias_path %>

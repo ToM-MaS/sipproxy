@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Alias username:</b>
+  <%= @dbalias.alias_username %>
+</p>
+
+<p>
+  <b>Alias domain:</b>
+  <%= @dbalias.alias_domain %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @dbalias.username %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%= @dbalias.domain %>
+</p>
+
+
+<%= link_to 'Edit', edit_dbalias_path(@dbalias) %> |
+<%= link_to 'Back', dbaliases_path %>

@@ -888,3 +888,1081 @@ Migrating to CreateSubscribers (20110214100151)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("subscribers")
+
+
+Started GET "/subscribers/" for 127.0.0.1 at 2011-02-16 10:26:23 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.8ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Rendered subscribers/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 95ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subscribers/new" for 127.0.0.1 at 2011-02-16 10:26:27 +0100
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (25.6ms)
+Rendered subscribers/new.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 56ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2011-02-16 10:26:39 +0100
+  Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "subscriber"=>{"username"=>"1001", "domain"=>"192.168.0.165", "password"=>"[FILTERED]", "email_address"=>"", "ha1"=>"349462838cbb62d08f6fd0d82bb65b84", "ha1b"=>"", "rpid"=>""}, "commit"=>"Create Subscriber"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = '1001') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('1001', '192.168.0.165', '', '', '349462838cbb62d08f6fd0d82bb65b84', '', '', '2011-02-16 09:26:39.269656', '2011-02-16 09:26:39.269656')
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://localhost:3000/subscribers/1
+Completed 302 Found in 311ms
+
+
+Started GET "/subscribers/1" for 127.0.0.1 at 2011-02-16 10:26:39 +0100
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubscriber Load (0.4ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 1) LIMIT 1
+Rendered subscribers/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 50ms (Views: 28.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2011-02-16 10:27:26 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.9ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Rendered subscribers/index.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 156ms (Views: 71.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subscribers/new" for 127.0.0.1 at 2011-02-16 10:27:29 +0100
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (23.7ms)
+Rendered subscribers/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 53ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2011-02-16 10:27:38 +0100
+  Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "subscriber"=>{"username"=>"1002", "domain"=>"192.168.0.165", "password"=>"[FILTERED]", "email_address"=>"", "ha1"=>"70720b23d8d51852fd2b1c503018ef0e", "ha1b"=>"", "rpid"=>""}, "commit"=>"Create Subscriber"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = '1002') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('1002', '192.168.0.165', '', '', '70720b23d8d51852fd2b1c503018ef0e', '', '', '2011-02-16 09:27:38.428056', '2011-02-16 09:27:38.428056')
+Completed   in 127ms
+
+Errno::EACCES (Permission denied - /etc/subscriber):
+  app/models/subscriber.rb:16:in `initialize'
+  app/models/subscriber.rb:16:in `open'
+  app/models/subscriber.rb:16:in `generate_dbtext'
+  app/models/subscriber.rb:11:in `generate_auth_db'
+  app/controllers/subscribers_controller.rb:46:in `block in create'
+  app/controllers/subscribers_controller.rb:45:in `create'
+
+Rendered /home/spag/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /home/spag/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.8ms)
+Rendered /home/spag/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateSubscribers (20110214100151)
+Migrating to CreateDbaliases (20110217075525)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110217075525')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("dbaliases")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("subscribers")[0m
+
+
+Started GET "/dbalias/" for 127.0.0.1 at 2011-02-17 09:06:33 +0100
+
+ActionController::RoutingError (No route matches "/dbalias"):
+  
+
+Rendered /home/spag/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/dbaliases/" for 127.0.0.1 at 2011-02-17 09:06:36 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.8ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 179ms (Views: 30.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 09:06:39 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (37.9ms)
+Rendered dbaliases/new.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 71ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 09:06:57 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"1001", "domain"=>"192.168.0.165"}, "commit"=>"Create Dbalias"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."username" = '1001') LIMIT 1
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('123', '192.168.0.165', '1001', '192.168.0.165', '2011-02-17 08:06:58.151502', '2011-02-17 08:06:58.151502')[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://localhost:3000/dbaliases/1
+Completed 302 Found in 286ms
+
+
+Started GET "/dbaliases/1" for 127.0.0.1 at 2011-02-17 09:06:58 +0100
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 1) LIMIT 1[0m
+Rendered dbaliases/show.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 86ms (Views: 65.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:07:22 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.7ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 44ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (175.7ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (94.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (87.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[35mSQL (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (173.3ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.5ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (125.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (98.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (87.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[35mSQL (77.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (176.9ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (72.6ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (105.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (87.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[35mSQL (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (183.7ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (101.6ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (129.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (113.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (98.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[35mSQL (99.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (167.7ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (118.7ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (98.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (76.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[35mSQL (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:31:18 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 199ms (Views: 27.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/dbaliases/1" for 127.0.0.1 at 2011-02-17 09:31:23 +0100
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (1.3ms)[0m  DELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 1)
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases
+Completed 302 Found in 255ms
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:31:23 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 27ms (Views: 9.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 09:31:52 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (19.2ms)
+Rendered dbaliases/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 51ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 09:31:59 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"1001", "domain"=>"192.168.0.165"}, "commit"=>"Create Dbalias"}
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('123', '192.168.0.165', '1001', '192.168.0.165', '2011-02-17 08:31:59.383422', '2011-02-17 08:31:59.383422')
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases/2
+Completed 302 Found in 274ms
+
+
+Started GET "/dbaliases/2" for 127.0.0.1 at 2011-02-17 09:31:59 +0100
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 2) LIMIT 1
+Rendered dbaliases/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 85ms (Views: 64.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:32:04 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 42ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subscribers/" for 127.0.0.1 at 2011-02-17 09:32:09 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[35mSubscriber Load (0.7ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Rendered subscribers/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 127ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subscribers/1/edit" for 127.0.0.1 at 2011-02-17 09:32:20 +0100
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 1) LIMIT 1[0m
+Rendered subscribers/_form.html.erb (79.3ms)
+Rendered subscribers/edit.html.erb within layouts/application (85.6ms)
+Completed 200 OK in 116ms (Views: 91.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/subscribers/1" for 127.0.0.1 at 2011-02-17 09:32:22 +0100
+  Processing by SubscribersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "subscriber"=>{"username"=>"1001", "domain"=>"192.168.0.165", "password"=>"[FILTERED]", "email_address"=>"", "ha1"=>"349462838cbb62d08f6fd0d82bb65b84", "ha1b"=>"", "rpid"=>""}, "commit"=>"Update Subscriber", "id"=>"1"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 1) LIMIT 1
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = '1001') AND ("subscribers".id <> 1) LIMIT 1[0m
+  [1m[35mSubscriber Load (0.2ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Redirected to http://localhost:3000/subscribers/1
+Completed 302 Found in 49ms
+
+
+Started GET "/subscribers/1" for 127.0.0.1 at 2011-02-17 09:32:22 +0100
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 1) LIMIT 1[0m
+Rendered subscribers/show.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 104ms (Views: 80.0ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (194.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (97.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateSubscribers (20110214100151)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110214100151')
+Migrating to CreateDbaliases (20110217075525)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110217075525')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("dbaliases")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("subscribers")[0m
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2011-02-17 09:35:30 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.8ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Rendered subscribers/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 179ms (Views: 9.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dbaliases/" for 127.0.0.1 at 2011-02-17 09:35:43 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 09:35:45 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (20.2ms)
+Rendered dbaliases/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 99ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 09:35:52 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"", "domain"=>""}, "commit"=>"Create Dbalias"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1
+Rendered dbaliases/_form.html.erb (8.5ms)
+Rendered dbaliases/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 88ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 09:35:59 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"1001", "domain"=>""}, "commit"=>"Create Dbalias"}
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('123', '192.168.0.165', '1001', '', '2011-02-17 08:35:59.780237', '2011-02-17 08:35:59.780237')
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases/1
+Completed 302 Found in 172ms
+
+
+Started GET "/dbaliases/1" for 127.0.0.1 at 2011-02-17 09:35:59 +0100
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 1) LIMIT 1
+Rendered dbaliases/show.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 89ms (Views: 67.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:36:04 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.7ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 86ms (Views: 26.7ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '100') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('100', NULL, '1000', NULL, '2011-02-17 08:41:42.083422', '2011-02-17 08:41:42.083422')
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (161.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (120.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateSubscribers (20110214100151)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110214100151')
+Migrating to CreateDbaliases (20110217075525)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110217075525')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("dbaliases")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("subscribers")[0m
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:44:48 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.8ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 156ms (Views: 9.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 09:44:51 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (20.8ms)
+Rendered dbaliases/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 54ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 09:44:58 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"1001", "domain"=>"192.168.0.165"}, "commit"=>"Create Dbalias"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mDbalias Load (0.1ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('123', '192.168.0.165', '1001', '192.168.0.165', '2011-02-17 08:44:58.491749', '2011-02-17 08:44:58.491749')
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases/1
+Completed 302 Found in 241ms
+
+
+Started GET "/dbaliases/1" for 127.0.0.1 at 2011-02-17 09:44:58 +0100
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDbalias Load (0.3ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 1) LIMIT 1
+Rendered dbaliases/show.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 87ms (Views: 65.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 09:45:01 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 45ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (148.5ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (109.8ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (133.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (109.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (98.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[35mSQL (99.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSubscriber Load (0.1ms)[0m  SELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = '1001') LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('1001', NULL, NULL, NULL, NULL, NULL, NULL, '2011-02-17 08:49:10.315924', '2011-02-17 08:49:10.315924')[0m
+  [1m[35mSubscriber Load (1.0ms)[0m  SELECT "subscribers".* FROM "subscribers"
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" IS NULL) LIMIT 1[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '10') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at") VALUES ('10', NULL, '1002', NULL, '2011-02-17 08:49:38.463426', '2011-02-17 08:49:38.463426')[0m
+  [1m[35mDbalias Load (0.5ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+  [1m[36mDbalias Load (0.4ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = '1001') ORDER BY alias_username[0m
+SQLite3::SQLException: no such column: dbaliases.subscriber_id: SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = '1001') ORDER BY alias_username
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateSubscribers (20110214100151)
+Migrating to CreateDbaliases (20110217075525)
+Migrating to DbaliasesBelongsToSubscribers (20110217085508)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateSubscribers (20110214100151)
+Migrating to CreateDbaliases (20110217075525)
+Migrating to DbaliasesBelongsToSubscribers (20110217085508)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (22.2ms)[0m  [1mALTER TABLE "dbaliases" ADD "subscriber_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110217085508')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("dbaliases")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("subscribers")[0m
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (142.2ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime, "subscriber_id" integer) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (109.4ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (134.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (114.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (109.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217085508')[0m
+  [1m[35mSQL (99.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (111.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.1ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '1000') LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('1000', NULL, '2000', NULL, '2011-02-17 09:00:31.934719', '2011-02-17 09:00:31.934719', NULL)[0m
+  [1m[35mDbalias Load (1.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:01:00 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (2.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 181ms (Views: 33.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dbaliases/1/edit" for 127.0.0.1 at 2011-02-17 10:01:06 +0100
+  Processing by DbaliasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 1) LIMIT 1[0m
+Rendered dbaliases/_form.html.erb (26.8ms)
+Rendered dbaliases/edit.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 63ms (Views: 38.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:01:10 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (2.1ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 99ms (Views: 80.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/dbaliases/1" for 127.0.0.1 at 2011-02-17 10:01:13 +0100
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"1"}
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (0.6ms)[0m  DELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 1)
+  [1m[36mDbalias Load (2.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases
+Completed 302 Found in 199ms
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:01:13 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (2.5ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 100ms (Views: 76.7ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/dbaliases/2" for 127.0.0.1 at 2011-02-17 10:01:16 +0100
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"2"}
+  [1m[36mDbalias Load (1.0ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 2) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  DELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 2)
+  [1m[36mDbalias Load (1.0ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases
+Completed 302 Found in 216ms
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:01:16 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (1.2ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 47ms (Views: 28.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/dbaliases/3" for 127.0.0.1 at 2011-02-17 10:01:18 +0100
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"3"}
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 3) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  DELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 3)
+  [1m[36mDbalias Load (0.1ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases
+Completed 302 Found in 208ms
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:01:18 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.8ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 12.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/subscribers/" for 127.0.0.1 at 2011-02-17 10:01:27 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (1.8ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Rendered subscribers/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 80ms (Views: 30.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/subscribers/1/edit" for 127.0.0.1 at 2011-02-17 10:01:29 +0100
+  Processing by SubscribersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubscriber Load (4.7ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 1) LIMIT 1
+Rendered subscribers/_form.html.erb (31.2ms)
+Rendered subscribers/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 121ms (Views: 43.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2011-02-17 10:01:32 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (1.7ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Rendered subscribers/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 51ms (Views: 31.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/subscribers/1" for 127.0.0.1 at 2011-02-17 10:01:34 +0100
+  Processing by SubscribersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"1"}
+  [1m[35mSubscriber Load (1.7ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 1) LIMIT 1
+  [1m[36mDbalias Load (0.3ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases".subscriber_id = '1001') ORDER BY alias_username[0m
+  [1m[35mAREL (0.3ms)[0m  DELETE FROM "subscribers" WHERE ("subscribers"."id" = 1)
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://localhost:3000/subscribers
+Completed 302 Found in 211ms
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2011-02-17 10:01:35 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[35mSubscriber Load (0.6ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Rendered subscribers/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 10.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/subscribers/new" for 127.0.0.1 at 2011-02-17 10:01:42 +0100
+  Processing by SubscribersController#new as HTML
+Rendered subscribers/_form.html.erb (21.2ms)
+Rendered subscribers/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 55ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscribers" for 127.0.0.1 at 2011-02-17 10:01:51 +0100
+  Processing by SubscribersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "subscriber"=>{"username"=>"1001", "domain"=>"192.168.0.165", "password"=>"[FILTERED]", "email_address"=>"", "ha1"=>"349462838cbb62d08f6fd0d82bb65b84", "ha1b"=>"", "rpid"=>""}, "commit"=>"Create Subscriber"}
+  [1m[36mSubscriber Load (0.3ms)[0m  [1mSELECT "subscribers"."id" FROM "subscribers" WHERE ("subscribers"."username" = '1001') LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "subscribers" ("username", "domain", "password", "email_address", "ha1", "ha1b", "rpid", "created_at", "updated_at") VALUES ('1001', '192.168.0.165', '', '', '349462838cbb62d08f6fd0d82bb65b84', '', '', '2011-02-17 09:01:51.333643', '2011-02-17 09:01:51.333643')
+  [1m[36mSubscriber Load (0.2ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Redirected to http://localhost:3000/subscribers/2
+Completed 302 Found in 256ms
+
+
+Started GET "/subscribers/2" for 127.0.0.1 at 2011-02-17 10:01:51 +0100
+  Processing by SubscribersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSubscriber Load (0.3ms)[0m  SELECT "subscribers".* FROM "subscribers" WHERE ("subscribers"."id" = 2) LIMIT 1
+Rendered subscribers/show.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 102ms (Views: 77.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2011-02-17 10:01:54 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[36mSubscriber Load (0.7ms)[0m  [1mSELECT "subscribers".* FROM "subscribers"[0m
+Rendered subscribers/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 49ms (Views: 30.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dbaliases/" for 127.0.0.1 at 2011-02-17 10:02:01 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 73ms (Views: 55.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 10:02:02 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (17.0ms)
+Rendered dbaliases/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 49ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 10:02:09 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"1001", "domain"=>"192.168.0.165"}, "commit"=>"Create Dbalias"}
+  [1m[36mDbalias Load (3.4ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('123', '192.168.0.165', '1001', '192.168.0.165', '2011-02-17 09:02:09.939721', '2011-02-17 09:02:09.939721', NULL)
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases/4
+Completed 302 Found in 241ms
+
+
+Started GET "/dbaliases/4" for 127.0.0.1 at 2011-02-17 10:02:10 +0100
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mDbalias Load (0.5ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 4) LIMIT 1
+Rendered dbaliases/show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 47ms (Views: 24.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:02:13 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 95ms (Views: 28.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 10:03:14 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (57.7ms)
+Rendered dbaliases/new.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 113ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 10:03:24 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"123", "alias_domain"=>"192.168.0.165", "username"=>"test", "domain"=>""}, "commit"=>"Create Dbalias"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mDbalias Load (0.2ms)[0m  SELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '123') LIMIT 1
+Rendered dbaliases/_form.html.erb (9.1ms)
+Rendered dbaliases/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 205ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:03:33 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 44ms (Views: 27.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:03:36 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[35mDbalias Load (0.9ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Rendered dbaliases/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 44ms (Views: 26.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dbaliases/new" for 127.0.0.1 at 2011-02-17 10:03:41 +0100
+  Processing by DbaliasesController#new as HTML
+Rendered dbaliases/_form.html.erb (17.2ms)
+Rendered dbaliases/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 50ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dbaliases" for 127.0.0.1 at 2011-02-17 10:03:51 +0100
+  Processing by DbaliasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "dbalias"=>{"alias_username"=>"124", "alias_domain"=>"192.168.0.165", "username"=>"test", "domain"=>""}, "commit"=>"Create Dbalias"}
+  [1m[36mDbalias Load (0.2ms)[0m  [1mSELECT "dbaliases"."id" FROM "dbaliases" WHERE ("dbaliases"."alias_username" = '124') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "dbaliases" ("alias_username", "alias_domain", "username", "domain", "created_at", "updated_at", "subscriber_id") VALUES ('124', '192.168.0.165', 'test', '', '2011-02-17 09:03:51.534483', '2011-02-17 09:03:51.534483', NULL)
+  [1m[36mDbalias Load (0.8ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Redirected to http://localhost:3000/dbaliases/5
+Completed 302 Found in 232ms
+
+
+Started GET "/dbaliases/5" for 127.0.0.1 at 2011-02-17 10:03:51 +0100
+  Processing by DbaliasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 5) LIMIT 1
+Rendered dbaliases/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 48ms (Views: 25.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:03:54 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (1.1ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 47ms (Views: 29.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/dbaliases/5" for 127.0.0.1 at 2011-02-17 10:04:07 +0100
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"5"}
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 5) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 5)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://localhost:3000/dbaliases
+Completed 302 Found in 288ms
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:04:08 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.9ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 45ms (Views: 27.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/dbaliases/4" for 127.0.0.1 at 2011-02-17 10:04:10 +0100
+  Processing by DbaliasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7F2/qabZ7ihuEDidKckTx4BDKdWkKE3EZYcuiNdSBtc=", "id"=>"4"}
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases" WHERE ("dbaliases"."id" = 4) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mDELETE FROM "dbaliases" WHERE ("dbaliases"."id" = 4)[0m
+  [1m[35mDbalias Load (0.6ms)[0m  SELECT "dbaliases".* FROM "dbaliases"
+Redirected to http://localhost:3000/dbaliases
+Completed 302 Found in 274ms
+
+
+Started GET "/dbaliases" for 127.0.0.1 at 2011-02-17 10:04:10 +0100
+  Processing by DbaliasesController#index as HTML
+  [1m[36mDbalias Load (0.6ms)[0m  [1mSELECT "dbaliases".* FROM "dbaliases"[0m
+Rendered dbaliases/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 10.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/sip_accounts/" for 127.0.0.1 at 2011-02-17 10:04:19 +0100
+
+ActionController::RoutingError (No route matches "/sip_accounts"):
+  
+
+Rendered /home/spag/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/subscribers/" for 127.0.0.1 at 2011-02-17 10:04:22 +0100
+  Processing by SubscribersController#index as HTML
+  [1m[35mSubscriber Load (0.6ms)[0m  SELECT "subscribers".* FROM "subscribers"
+Rendered subscribers/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 123ms (Views: 29.4ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (169.0ms)[0m  CREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime, "subscriber_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.8ms)[0m  CREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (132.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (110.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (87.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217085508')[0m
+  [1m[35mSQL (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214100151')
+  [1m[36mSQL (88.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217075525')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (152.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (111.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateSubscribers (20110214100151)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "subscribers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "password" varchar(255), "email_address" varchar(255), "ha1" varchar(255), "ha1b" varchar(255), "rpid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110214100151')
+Migrating to CreateDbaliases (20110217075525)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "dbaliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "alias_username" varchar(255), "alias_domain" varchar(255), "username" varchar(255), "domain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110217075525')
+Migrating to DbaliasesBelongsToSubscribers (20110217085508)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "dbaliases" ADD "subscriber_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110217085508')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("dbaliases")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("subscribers")[0m

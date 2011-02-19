@@ -2,7 +2,7 @@ Sipproxy::Application.routes.draw do
   resources :dbaliases
 
   resources :subscribers
-
+  match 'subscribers_username/:username' => 'subscribers#show_username'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -21,6 +21,15 @@ class SubscribersController < ApplicationController
     end
   end
 
+def show_username
+    @subscriber = Subscriber.find_by_username(params[:username])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @subscriber }
+    end
+  end
+
   # GET /subscribers/new
   # GET /subscribers/new.xml
   def new

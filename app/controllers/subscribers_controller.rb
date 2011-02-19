@@ -2,7 +2,12 @@ class SubscribersController < ApplicationController
   # GET /subscribers
   # GET /subscribers.xml
   def index
-    @subscribers = Subscriber.all
+    if params[:username]
+      @subscribers = Subscriber.find :all, :conditions => ['username = ?', params[:username]] 
+    else
+      @subscribers = Subscriber.find(:all)
+    end
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,15 +19,6 @@ class SubscribersController < ApplicationController
   # GET /subscribers/1.xml
   def show
     @subscriber = Subscriber.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @subscriber }
-    end
-  end
-
-def show_username
-    @subscriber = Subscriber.find_by_username(params[:username])
 
     respond_to do |format|
       format.html # show.html.erb

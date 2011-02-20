@@ -2,7 +2,12 @@ class DbaliasesController < ApplicationController
   # GET /dbaliases
   # GET /dbaliases.xml
   def index
-    @dbaliases = Dbalias.all
+    if params[:username] && params[:alias_username]
+      @dbaliases = Dbalias.find :all, :conditions => ['username = ? AND alias_username = ?', params[:username], params[:alias_username]]
+    else
+      @dbaliases = Dbalias.all
+    end
+    
 
     respond_to do |format|
       format.html # index.html.erb

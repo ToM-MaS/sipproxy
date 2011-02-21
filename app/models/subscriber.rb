@@ -18,19 +18,19 @@ class Subscriber < ActiveRecord::Base
     dbtext = File.open(DBTEXT_SUBSCRIBER_FILE, "w")
     dbtext.puts("username(str) domain(str) password(str) email_address(str) datetime_created(int) datetime_modified(int) ha1(str) ha1b(str) rpid(str,null)")
     Subscriber.all().each do |subscriber|
-      if (subscriber.domain == "")
+      if (subscriber.domain == nil || subscriber.domain == "")
 	subscriber.domain = "x"
       end
-      if (subscriber.password == "")
+      if (subscriber.password == nil || subscriber.password == "")
 	subscriber.password = "x"
       end
-      if (subscriber.email_address == "")
+      if (subscriber.email_address == nil || subscriber.email_address == "")
 	subscriber.email_address = "x"
       end
-      if (subscriber.ha1 == "")
+      if (subscriber.ha1 == nil || subscriber.ha1 == "")
 	subscriber.ha1 = "x"
       end		
-      if (subscriber.ha1b == "")
+      if (subscriber.ha1b == nil || subscriber.ha1b == "")
 	subscriber.ha1b = "x"
       end			
       if (subscriber.username)

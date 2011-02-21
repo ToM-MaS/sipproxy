@@ -20,10 +20,10 @@ class Dbalias < ActiveRecord::Base
     dbtext = File.open(DBTEXT_DBALIASES_FILE, "w")
     dbtext.puts("alias_username(str) alias_domain(str) username(str) domain(str)")
     Dbalias.all().each do |dbalias|
-      if (dbalias.domain == "")
+      if (dbalias.domain == nil || dbalias.domain == "")
 	dbalias.domain = "x"
       end
-      if (dbalias.alias_domain == "")
+      if (dbalias.alias_domain == nil || dbalias.alias_domain == "")
 	dbalias.alias_domain = "x"
       end		
       if (dbalias.username && dbalias.alias_username)

@@ -1,6 +1,6 @@
 class Dbalias < ActiveRecord::Base
   validates_presence_of :alias_username
-  validates_uniqueness_of :alias_username, :scope => :username
+  validates_uniqueness_of :alias_username
   
   validates_presence_of :username
   

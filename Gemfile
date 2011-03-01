@@ -7,6 +7,16 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+#group :development do
+	# Rails ERD (aptitude install graphviz)
+	# Render Diagrams of the DBs http://rails-erd.rubyforge.org/
+	gem "rails-erd"
+	
+	# run ./script/annotate to annotate
+	gem 'annotate-models'
+#end
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

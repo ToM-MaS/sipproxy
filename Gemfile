@@ -34,3 +34,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "shoulda"
 # https://github.com/thoughtbot/factory_girl_rails
 gem 'factory_girl_rails'
+
+
+# Local Variables:
+# mode: ruby
+# End:

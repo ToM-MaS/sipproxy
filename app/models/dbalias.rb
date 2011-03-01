@@ -1,3 +1,18 @@
+# == Schema Information
+# Schema version: 20110217085508
+#
+# Table name: dbaliases
+#
+#  id             :integer         not null, primary key
+#  alias_username :string(255)
+#  alias_domain   :string(255)
+#  username       :string(255)
+#  domain         :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#  subscriber_id  :integer
+#
+
 class Dbalias < ActiveRecord::Base
   validates_presence_of :alias_username
   validates_uniqueness_of :alias_username

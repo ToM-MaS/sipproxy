@@ -1,3 +1,20 @@
+# == Schema Information
+# Schema version: 20110217085508
+#
+# Table name: subscribers
+#
+#  id            :integer         not null, primary key
+#  username      :string(255)
+#  domain        :string(255)
+#  password      :string(255)
+#  email_address :string(255)
+#  ha1           :string(255)
+#  ha1b          :string(255)
+#  rpid          :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 class Subscriber < ActiveRecord::Base
   validates_presence_of :username
   validates_uniqueness_of :username

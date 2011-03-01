@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">2011-02-21 16:20:09 +0100</dd>
+			<dd class="modified-date">2011-03-01 17:13:44 +0100</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -43,7 +43,25 @@
 		
 		<div class="description">
 			<h2>Description</h2>
-			
+			<h2>Schema Information</h2>
+<p>
+Schema version: 20110217085508
+</p>
+<p>
+Table name: subscribers
+</p>
+<pre>
+ id            :integer         not null, primary key
+ username      :string(255)
+ domain        :string(255)
+ password      :string(255)
+ email_address :string(255)
+ ha1           :string(255)
+ ha1b          :string(255)
+ rpid          :string(255)
+ created_at    :datetime
+ updated_at    :datetime</pre>
+
 		</div>
 		
 	</div>

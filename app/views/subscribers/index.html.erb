@@ -25,7 +25,7 @@
     <td><%= subscriber.rpid %></td>
     <td><%= link_to 'Show', subscriber %></td>
     <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %></td>
-    <td><%= link_to 'Destroy', subscriber, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Destroy', subscriber, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

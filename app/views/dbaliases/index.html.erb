@@ -19,7 +19,7 @@
     <td><%= dbalias.domain %></td>
     <td><%= link_to 'Show', dbalias %></td>
     <td><%= link_to 'Edit', edit_dbalias_path(dbalias) %></td>
-    <td><%= link_to 'Destroy', dbalias, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Destroy', dbalias, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

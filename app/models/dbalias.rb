@@ -19,17 +19,17 @@ class Dbalias < ActiveRecord::Base
   
   validates_presence_of :username
   
-  validates_presence_of :subscriber_id
-  validates_numericality_of :subscriber_id
+#  validates_presence_of :subscriber_id
+#  validates_numericality_of :subscriber_id
   
   after_save :generate_alias_db
   after_destroy :generate_alias_db
 
   belongs_to :subscriber, :validate => true
   
-  validates_presence_of :subscriber
+#  validates_presence_of :subscriber
   
-  validate :username_and_domain_must_be_same_as_in_subscriber
+#  validate :username_and_domain_must_be_same_as_in_subscriber
   
   private
   

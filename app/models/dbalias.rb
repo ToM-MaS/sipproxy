@@ -15,34 +15,26 @@
 
 class Dbalias < ActiveRecord::Base
   validates_presence_of :alias_username
-  validates_uniqueness_of :alias_username
+  validates_uniqueness_of :alias_username, :scope => [:alias_domain, :username, :domain]
   
   validates_presence_of :username
-  
-#  validates_presence_of :subscriber_id
-#  validates_numericality_of :subscriber_id
+  validates_presence_of :domain, :scope => [:alias_domain, :username, :alias_username]
   
   after_save :generate_alias_db
   after_destroy :generate_alias_db
 
   belongs_to :subscriber, :validate => true
   
-#  validates_presence_of :subscriber
-  
-#  validate :username_and_domain_must_be_same_as_in_subscriber
+  validate :username_and_domain_must_exist_in_subscriber
   
   private
-  
-  def username_and_domain_must_be_same_as_in_subscriber
-    if (self.subscriber == nil)
-      errors.add( :subscriber_id, "Subscriber #{self.subscriber_id} does not exist." )
-    else
-      if (self.subscriber.username != self.username)
-	errors.add( :username, "Subscriber username \"#{self.subscriber.username}\" differs from alias username (\"#{self.username}\")." ) 
-      end
-      if (self.subscriber.domain != self.domain)
-	errors.add( :domain, "Subscriber domain \"#{self.subscriber.domain}\" differs from alias domain (\"#{self.domain}\")." )
-      end
+
+  def username_and_domain_must_exist_in_subscriber
+    subscriber = Subscriber.find_by_username(self.username)
+    if (! subscriber)
+	errors.add( :username, "not found" )
+    elsif (subscriber.domain != self.domain)
+	errors.add( :domain, " not found for subscriber \"#{self.username}\"" )
     end
   end
   

@@ -2,7 +2,8 @@ require 'test_helper'
 
 class DbaliasesControllerTest < ActionController::TestCase
   setup do
-    @dbalias = Factory.create(:dbalias)
+    subscriber = Factory.create(:subscriber)
+    @dbalias = Factory.create(:dbalias, :username => subscriber.username, :domain => subscriber.domain)
   end
 
   test "should get index" do
@@ -18,7 +19,8 @@ class DbaliasesControllerTest < ActionController::TestCase
 
   test "should create dbalias" do
     assert_difference('Dbalias.count') do
-      post :create, :dbalias => Factory.attributes_for(:dbalias) 
+      subscriber = Factory.create(:subscriber)
+      post :create, :dbalias => Factory.attributes_for(:dbalias, :username => subscriber.username, :domain => subscriber.domain) 
     end
 
     assert_redirected_to dbalias_path(assigns(:dbalias))

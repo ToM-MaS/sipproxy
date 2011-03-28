@@ -20,6 +20,9 @@ class DbaliasTest < ActiveSupport::TestCase
   should "not be valid with nil domain" do
     assert !Factory.build(:dbalias, :domain => nil).valid?
   end
+  should "not be valid with username and domain alias_username and alias_domain" do
+    assert !Factory.build(:dbalias, :username => 'test_user', :domain => 'test_domain', :alias_username => 'test_user', :alias_domain => 'test_domain').valid?
+  end
   should "not be valid if not unique" do
     subscriber = Factory.create(:subscriber)
     dbalias = Factory.create(:dbalias, :username => subscriber.username, :domain => subscriber.domain)

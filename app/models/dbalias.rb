@@ -26,9 +26,17 @@ class Dbalias < ActiveRecord::Base
   belongs_to :subscriber, :validate => true
   
   validate :username_and_domain_must_exist_in_subscriber
+  validate :username_and_domain_not_equal_their_aliases
   
   private
 
+  def username_and_domain_not_equal_their_aliases
+    if (self.username == self.alias_username && self.domain == self.alias_domain)
+      errors.add( :username, "equals Alias Username" )
+      errors.add( :domain, "equals Alias Domain" )
+    end
+  end
+  
   def username_and_domain_must_exist_in_subscriber
     subscriber = Subscriber.find_by_username(self.username)
     if (! subscriber)

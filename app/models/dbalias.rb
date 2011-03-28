@@ -15,10 +15,11 @@
 
 class Dbalias < ActiveRecord::Base
   validates_presence_of :alias_username
-  validates_uniqueness_of :alias_username, :scope => [:alias_domain, :username, :domain]
-  
   validates_presence_of :username
-  validates_presence_of :domain, :scope => [:alias_domain, :username, :alias_username]
+  validates_presence_of :domain
+  validates_presence_of :alias_domain
+  validates_uniqueness_of :alias_username, :scope => [:alias_domain, :username, :domain]
+  validates_uniqueness_of :alias_domain, :case_sensitive => false, :scope => [:domain, :username, :alias_username]
   
   after_save :generate_alias_db
   after_destroy :generate_alias_db
@@ -26,23 +27,25 @@ class Dbalias < ActiveRecord::Base
   belongs_to :subscriber, :validate => true
   
   validate :username_and_domain_must_exist_in_subscriber
-  validate :username_and_domain_not_equal_their_aliases
+  validate :alias_username_and_alias_domain_must_not_exist_in_subscriber
   
   private
-
-  def username_and_domain_not_equal_their_aliases
-    if (self.username == self.alias_username && self.domain == self.alias_domain)
-      errors.add( :username, "equals Alias Username" )
-      errors.add( :domain, "equals Alias Domain" )
+  
+  def username_and_domain_must_exist_in_subscriber
+    subscriber = Subscriber.first(:conditions => { :username => self.username, :domain => self.domain})
+    if (! subscriber)
+      errors.add( :username, "not found" )
+      errors.add( :domain, "not found" )
+    else
+      self.subscriber_id = subscriber.id
     end
   end
   
-  def username_and_domain_must_exist_in_subscriber
-    subscriber = Subscriber.find_by_username(self.username)
-    if (! subscriber)
-	errors.add( :username, "not found" )
-    elsif (subscriber.domain != self.domain)
-	errors.add( :domain, " not found for subscriber \"#{self.username}\"" )
+  def alias_username_and_alias_domain_must_not_exist_in_subscriber
+    subscriber = Subscriber.first(:conditions => { :username => self.alias_username, :domain => self.alias_domain})
+    if (subscriber)
+	errors.add( :alias_username, "has already been taken" )
+	errors.add( :alias_domain, "has already been taken" )
     end
   end
   

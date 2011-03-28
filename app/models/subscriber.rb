@@ -17,7 +17,10 @@
 
 class Subscriber < ActiveRecord::Base
   validates_presence_of :username
-  validates_uniqueness_of :username
+  validates_uniqueness_of :username, :scope => [:domain]
+  validates_presence_of :domain
+  validates_uniqueness_of :domain, :case_sensitive => false, :scope => [:username]
+  
 
   after_save :generate_auth_db
   after_destroy :generate_auth_db

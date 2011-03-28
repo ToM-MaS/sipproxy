@@ -13,8 +13,8 @@ class SubscriberTest < ActiveSupport::TestCase
     assert !Factory.build(:subscriber, :username => nil).valid?
   end
   
-  should "be valid with nil domain" do
-    assert Factory.build(:subscriber, :domain => nil).valid?
+  should "not be valid with nil domain" do
+    assert !Factory.build(:subscriber, :domain => nil).valid?
   end
   
   should "be valid with nil password" do
@@ -37,8 +37,8 @@ class SubscriberTest < ActiveSupport::TestCase
     assert Factory.build(:subscriber, :rpid => nil).valid?
   end
   
-  should "not be valid when username not unique" do
+  should "not be valid when username and domain not unique" do
     subscriber = Factory.create(:subscriber)
-    assert !Factory.build(:subscriber, :username => subscriber.username).valid?
+    assert !Factory.build(:subscriber, :username => subscriber.username, :domain => subscriber.domain).valid?
   end 
 end
